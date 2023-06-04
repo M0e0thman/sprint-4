@@ -62,7 +62,7 @@ if normalize:
 else:
     histnorm = None
 st.write(px.histogram(df_filtered,
-                      x='car price',
+                      x='price',
                       nbins=30,
                       color='manufacturer',
                       histnorm=histnorm,
