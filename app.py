@@ -46,7 +46,7 @@ fig = px.scatter(df_conditon ,
 #also contains name of car
 st.write(fig)
 
-st.header('Histogram: Manfacturer and price of car readings')
+st.header('Histogram: Manfacturer and odometer readings')
 
 manufac_list = sorted(df['manufacturer'].unique())
 manufacturer_1 = st.selectbox('Select manufacturer 1',
@@ -62,9 +62,8 @@ if normalize:
 else:
     histnorm = None
 st.write(px.histogram(df_filtered,
-                      x='price',
-                      nbins=30,
+                      x='odometer',
+                      nbins=40,
                       color='manufacturer',
                       histnorm=histnorm,
                       barmode='overlay'))
-
